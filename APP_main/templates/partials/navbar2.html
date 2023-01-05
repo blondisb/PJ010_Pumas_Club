@@ -1,50 +1,48 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href={% url 'URL_home' %}>
-        <img src="{% static 'files/pumas-nav.png' %}" width="100" height="40" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href={% url 'URL_gallery' %}>GALERIA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={% url 'URL_about' %}>EL CLUB</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={% url 'URL_contact' %}>CONTÁCTENOS</a>
-        </li>
-        {% comment %} 
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> {% endcomment %}
-      </ul>
+
+<nav class="navbar navbar-expand-lg navbar-light py-0" style="background-color: #fff;">
+    <div class="container">
+        <a class="navbar-brand" href={% url 'URL_home' %}>
+            <img src="{% static 'files/lg-pumas3b.png' %}" width="140" height="60" />
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href={% url 'URL_gallery' %}>NOTICIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href={% url 'URL_gallery' %}>STATS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'URL_about' %}>EL CLUB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={% url 'URL_contact' %}>CONTÁCTENOS</a>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <a class="btn btn-primary btn-sm" href="{% static 'files/pdf.pdf' %}" target="_blank">LOGIN</a>
+                </li>
+                {% comment %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li> {% endcomment %}
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>

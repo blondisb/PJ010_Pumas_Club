@@ -12,10 +12,15 @@ section{
     background-position: 50% 50%;
 }
 
+.navbar {
+    --bs-navbar-padding-x: 15px;
+    --bs-navbar-padding-y: 10px;
+}
 
-
-
-
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+  }
 
 
 
