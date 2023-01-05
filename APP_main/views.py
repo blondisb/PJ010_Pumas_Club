@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 # Create your views here.
 def VW_home(request):
@@ -9,6 +11,3 @@ def VW_about(request):
 
 def VW_contact(request):
     return render(request, 'contact.html')
-
-def VW_gallery(request):
-    return render(request, 'gallery.html')
