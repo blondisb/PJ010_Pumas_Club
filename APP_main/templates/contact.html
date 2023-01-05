@@ -2,7 +2,46 @@
 {% load static %}
 {% block content %}
 
-<section>
-    Contáctenos
-</section>
+<div class="div_main_contact">
+
+
+    <section>
+        <div class="p-4">
+            <center>
+                <img class="img-fluid" src={% static 'files/whatsapp.png' %} alt="whatsapp-logo" width="25%">
+                <img class="img-fluid" src={% static 'files/facebook.png' %} alt="facebook-logo" width="25%">
+            </center>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="div_contact">
+            Contáctenos
+            <form>
+                <div>
+                    <label></label>
+                    <input type="text" class="form-control" name="name" placeholder="Nombre">
+                </div>
+                <div>
+                    <label></label>
+                    <input type="text" class="form-control" name="name" placeholder="Télefono">
+                </div>
+                <div>
+                    <label></label>
+                    <input type="email" class="form-control" name="email" placeholder="Correo">
+                </div>
+                <div>
+                    <label></label>
+                    <textarea class="form-control" name="message" placeholder="Mensaje" rows="4" cols="50"></textarea>
+                </div>
+                <div>
+                    <a>Button Submit</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</div>
 {% endblock %}

@@ -1,0 +1,162 @@
+section {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec_home1 {
+  background-image: url("../files/ninhos1.jpg");
+  background-position: 50% 50%;
+}
+
+.div_main_contact {
+  background-image: url("../files/team2.jpg");
+  /* background-position: 50% 50%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.div_contact{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.sec_vision {
+  background-image: url("../files/ninhos2.jpg");
+  background-position: 50% 50%;
+}
+
+.sec_login {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  background: rgb(6, 24, 72);
+  background: linear-gradient(
+    62deg,
+    rgba(6, 24, 72, 1) 9%,
+    rgba(171, 114, 5, 1) 96%
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)) */
+}
+
+.div_news {
+  background: rgb(6, 24, 72);
+  background: linear-gradient(
+    62deg,
+    rgba(171, 114, 5, 1) 9%,
+    rgba(6, 24, 72, 1) 96%
+  );
+}
+
+.div_new_details {
+  background: rgb(6, 24, 72);
+  background: linear-gradient(
+    62deg,
+    rgb(214, 195, 159) 9%,
+    rgb(193, 209, 255) 96%
+  );
+}
+
+
+.vertical_center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.centerf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* border: 3px solid green; */
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+.navbar-nav > li{
+  /* Space between navbar items  */
+  padding-left:24px;
+  padding-right:24px;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+
+
+.gradient_custom2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    #ee7724,
+    #d8363a,
+    #dd3675,
+    #b44593
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+  .gradient_form {
+    height: 100vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient_custom2 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
