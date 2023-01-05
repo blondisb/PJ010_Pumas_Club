@@ -1,8 +1,24 @@
 {% extends 'layouts/base.html' %}
 {% load static %}
 {% block content %}
-<section>
-    Galeria
-</section>
 
+<div class="div_news">
+    <h1>News</h1>
+    {% for news in all_news %}
+        <div class="container p-4">
+            <div class="card card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-fluid" src="{{ news.image.url }}" alt=" pic_{{ news.title }}">
+                    </div>
+                    <div class="col-9">
+                        <h3><a href="">{{ news.title }}</a></h3>
+                        <p>{{ news.date | date:"M, d, Y" | upper }}</p>
+                        <p>{{ news.description | striptags | truncatechars:80 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    {% endfor %}
+</div>
 {% endblock %}
