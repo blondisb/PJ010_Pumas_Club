@@ -12,6 +12,22 @@ section {
   background-position: 50% 50%;
 }
 
+.sec_vision {
+  background-image: url("../files/ninhos2.jpg");
+  background-position: 50% 50%;
+}
+
+.sec_mision {
+  background-image: url("../files/team3.jpg");
+  background-position: 50% 50%;
+}
+
+.sec_sponsors {
+  background-image: url("../files/ninhos3.jpg");
+  background-position: 50% 50%;
+}
+
+
 .div_main_contact {
   background-image: url("../files/team2.jpg");
   /* background-position: 50% 50%; */
@@ -27,10 +43,6 @@ section {
   padding: 20px 0;
 }
 
-.sec_vision {
-  background-image: url("../files/ninhos2.jpg");
-  background-position: 50% 50%;
-}
 
 .sec_login {
   /* fallback for old browsers */

@@ -1,5 +1,20 @@
 {% extends 'layouts/base.html'%}
 {% load static %}
 {% block content %}
-R
+
+    <h1> Insertar Anuncio </h1>
+    <form method="POST">
+         {% comment %} enctype ="multipart/form-data"> {% endcomment %}
+        {% csrf_token %}
+        {{form1.as_p}}
+        <button>
+            Save
+        </button>
+    </form>
+
+    {% comment %} {% if img_obj %}
+    <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+    <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+  {% endif %} {% endcomment %}
+
 {% endblock %}

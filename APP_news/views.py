@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .models import MO_news
+from .forms import FO_addnews
 
 # Create your views here.
 def VW_news(request):
@@ -19,7 +20,24 @@ def VW_newdetails(request, pk):
 
 @login_required()
 def VW_addnews(request):
-    return render(request, 'addnews.html')
+    if request.method == 'POST':
+        nw_title = request.POST['title']   # Form variable name
+        nw_description = request.POST['description']
+        nw_image = request.POST['image']
+        print("#########################################")
+        print(nw_image)
+
+        MO_news.objects.create(
+            title = nw_title,
+            description = nw_description,
+            image = nw_image
+        )
+        return redirect('URL_news')
+    
+    elif request.method == 'GET':
+        return render(request, 'addnews.html', {
+            'form1' : FO_addnews()
+        })
 
 def VW_logout(request):
     logout(request)

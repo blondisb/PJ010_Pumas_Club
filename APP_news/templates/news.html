@@ -12,7 +12,7 @@
             <div class="card card-body">
                 <div class="row">
                     <div class="col-2">
-                        <img class="img-fluid" src="{{ news.image.url }}" alt=" pic_{{ news.title }}" alig-center>
+                        <img class="img-fluid" src="{{ news.image.url | default_if_none:'#' }}" alt=" pic_{{ news.title }}" alig-center>
                     </div>
                     <div class="col-7">
                         <h3><a href="{% url 'URL_new_details' pk=news.id %}">{{ news.title }}</a></h3>

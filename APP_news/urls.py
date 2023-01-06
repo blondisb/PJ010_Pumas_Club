@@ -1,5 +1,8 @@
 from django.urls import path, include
 from . import views as vw
+# from django.conf.urls.static import static
+# from PJ_Pumas.settings import MEDIA_ROOT2, MEDIA_URL2
+
 
 urlpatterns = [
     path('', vw.VW_news, name='URL_news'),
@@ -7,3 +10,5 @@ urlpatterns = [
     path('addnews/', vw.VW_addnews, name='URL_addnews'),
     path('logout/', vw.VW_logout, name='URL_logout'),
 ]
+
+# urlpatterns += static(MEDIA_URL2, document_root=MEDIA_ROOT2)
