@@ -7,6 +7,29 @@
     <br/>
     <center><strong><h1 style="color: white;">Anuncios</h1></strong></center>
     <br/>
+
+    {% if request.user.is_authenticated %}
+        <div class="container p-4">
+            <div class="card card-body">
+                <div class="row">
+                    <center>
+                        <img class="img-fluid" src={% static 'files/add.png' %} alt=" pic_add" width="10%">
+                        <h3><a href="{% url 'URL_addnews' %}">Nueva Noticia</a></h3>
+                    </center>
+                    {% comment %} <div class="col-2">
+                        <img class="img-fluid" src={% static 'files/add.png' %} alt=" pic_add" alig-center>
+                    </div>
+                    <div class="col-7">
+                        <center><h3><a href="{% url 'URL_news' %}">Agregar Noticia</a></h3></center>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>  
+        <br/>
+    {% endif %}
+
+
+    <br/>
     {% for news in all_news %}
         <div class="container p-4">
             <div class="card card-body">
@@ -19,6 +42,21 @@
                         <p>{{ news.date | date:"M, d, Y" | upper }}</p>
                         <p >{{ news.description | striptags | truncatechars:200 }}</p>
                     </div>
+                    {% if request.user.is_authenticated %}
+                        <div class="col-1">
+                            <span>
+                                <br> 
+                                <img class="img-fluid" src={% static 'files/edit.png' %} alt=" pic_edit">
+                            </span>
+                        </div>
+                        <div class="col-1">
+                            <a>
+                                <br>
+                                <img src={% static 'files/trash.png' %} alt=" pic_trash" width="39">
+                            </a>
+                        </div>
+                    {% endif %}
+
                 </div>
             </div>
         </div>  

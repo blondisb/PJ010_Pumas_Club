@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light py-0" style="background-color: #fff;">
     <div class="container">
         <a class="navbar-brand" href={% url 'URL_home' %}>
-            <img src="{% static 'files/lg-pumas3b.png' %}" width="150" height="60" />
+            <img src="{% static 'files/lg-pumas3b.png' %}" alt="nav-logo" width="150" height="60" />
         </a>
 
 
@@ -19,7 +19,7 @@
                     <a class="nav-link active" aria-current="page" href={% url 'URL_news' %}>NOTICIAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href={% url 'URL_addnews' %}>STATS</a>
+                    <a class="nav-link active" aria-current="page" href={% url 'URL_stats' %}>STATS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={% url 'URL_about' %}>EL CLUB</a>

@@ -6,6 +6,9 @@ from django.contrib.auth import logout
 def VW_home(request):
     return render(request, 'home.html')
 
+def VW_stats(request):
+    return render(request, 'stats.html')
+
 def VW_about(request):
     return render(request, 'about.html')
 
