@@ -10,20 +10,16 @@
 
     {% if request.user.is_authenticated %}
         <div class="container p-4">
-            <div class="card card-body">
-                <div class="row">
-                    <center>
-                        <img class="img-fluid" src={% static 'files/add.png' %} alt=" pic_add" width="10%">
-                        <h3><a href="{% url 'URL_addnews' %}">Nueva Noticia</a></h3>
-                    </center>
-                    {% comment %} <div class="col-2">
-                        <img class="img-fluid" src={% static 'files/add.png' %} alt=" pic_add" alig-center>
+            <a href="{% url 'URL_addnews' %}">
+                <div class="card card-body">
+                    <div class="row">
+                        <center>
+                            <img style="max-width: 80px;" src={% static 'files/add.png' %} alt=" pic_add">
+                            <h3>Agregar</h3>
+                        </center>
                     </div>
-                    <div class="col-7">
-                        <center><h3><a href="{% url 'URL_news' %}">Agregar Noticia</a></h3></center>
-                    </div> {% endcomment %}
                 </div>
-            </div>
+            </a>
         </div>  
         <br/>
     {% endif %}
@@ -34,27 +30,29 @@
         <div class="container p-4">
             <div class="card card-body">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-md-2">
                         <img class="img-fluid" src="{{ news.image.url | default_if_none:'#' }}" alt=" pic_{{ news.title }}" alig-center>
                     </div>
                     <div class="col-7">
                         <h3><a href="{% url 'URL_new_details' pk=news.id %}">{{ news.title }}</a></h3>
-                        <p>{{ news.date | date:"M, d, Y" | upper }}</p>
+                        <p class="text-muted">{{ news.date | date:"M, d, Y" | upper }}</p>
                         <p >{{ news.description | striptags | truncatechars:200 }}</p>
                     </div>
                     {% if request.user.is_authenticated %}
-                        <div class="col-1">
-                            <span>
-                                <br> 
-                                <img class="img-fluid" src={% static 'files/edit.png' %} alt=" pic_edit">
-                            </span>
-                        </div>
-                        <div class="col-1">
-                            <a>
+                        <div class="col-2">
+                            <center>
+                                <br/>
+                                <a href="{% url 'URL_updnews' pk=news.id %}">
+                                    <img style="max-width: 40px;" src={% static 'files/edit.png' %} alt=" pic_edit"> 
+                                </a>
                                 <br>
-                                <img src={% static 'files/trash.png' %} alt=" pic_trash" width="39">
-                            </a>
+                                <br>
+                                <a href="{% url 'URL_delnews' pk=news.id %}">
+                                    <img style="max-width: 40px;" src={% static 'files/trash.png' %} alt=" pic_trash">
+                                </a>
+                            </center>
                         </div>
+                            
                     {% endif %}
 
                 </div>

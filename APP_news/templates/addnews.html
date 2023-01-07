@@ -2,15 +2,34 @@
 {% load static %}
 {% block content %}
 
+<section>
+  <div class="container p-4">
+    <br>
     <h1> Insertar Anuncio </h1>
-    <form method="POST">
-         {% comment %} enctype ="multipart/form-data"> {% endcomment %}
-        {% csrf_token %}
-        {{form1.as_p}}
-        <button>
-            Save
+    <br>
+    <center>
+      <hr>
+      <form method="POST">
+          {% comment %} enctype ="multipart/form-data"> {% endcomment %}
+          {% csrf_token %}
+          {{form1.as_p}}
+          <hr>
+          <br>
+          <br>
+          <button class="btn btn-primary">
+              Guardar
+          </button>
+      </form>
+      <br>
+      <a href={% url 'URL_news' %}>
+        <button class="btn btn-secondary">
+            Cancelar
         </button>
-    </form>
+      </a>
+    </center>
+  </div>
+</section>
+
 
     {% comment %} {% if img_obj %}
     <h3>Succesfully uploaded : {{img_obj.title}}</h3>
