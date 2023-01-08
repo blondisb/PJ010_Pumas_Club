@@ -7,8 +7,9 @@ from . import views as vw
 urlpatterns = [
     path('', vw.VW_news, name='URL_news'),
     path('newdetails/<int:pk>/', vw.VW_newdetails, name='URL_new_details'),
-    path('addnews/', vw.VW_addnews, name='URL_addnews'),
-    path('update/<int:pk>/', vw.Update.as_view(), name='URL_updnews'),
+    path('managenews/<int:pk>/', vw.VW_addnews, name='URL_managenews'),
+    # path('update/<int:pk>/', vw.Update.as_view(), name='URL_updnews'),
+    path('update/<int:pk>/', vw.VW_updnews, name='URL_updnews'),
     path('delete/<int:pk>/', vw.Delete.as_view(), name='URL_delnews'),
     path('logout/', vw.VW_logout, name='URL_logout'),
 ]
