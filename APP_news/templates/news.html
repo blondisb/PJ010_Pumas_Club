@@ -10,7 +10,8 @@
 
     {% if request.user.is_authenticated %}
         <div class="container p-4">
-            <a href="{% url 'URL_managenews' pk=0 %}">
+            {% comment %} <a href="{% url 'URL_managenews' pk=0 %}"> {% endcomment %}
+            <a href="{% url 'URL_createnews' %}">
                 {% comment %} pk=news.id {% endcomment %}
                 <div class="card card-body">
                     <div class="row">
@@ -43,7 +44,7 @@
                         <div class="col-2">
                             <center>
                                 <br/>
-                                <a href="{% url 'URL_managenews' pk=news.id %}">
+                                <a href="{% url 'URL_updnews' pk=news.id %}">
                                     <img style="max-width: 40px;" src={% static 'files/edit.png' %} alt=" pic_edit"> 
                                 </a>
                                 <br>

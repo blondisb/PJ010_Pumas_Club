@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.urls import reverse_lazy
-from django.views.generic import DeleteView, UpdateView
+from django.views.generic import DeleteView, UpdateView, CreateView
 from .models import MO_news
 from .forms import FO_addnews, FO_addnews2
 
@@ -74,13 +74,21 @@ def VW_updnews(request, pk):
     return render(request, 'addnews.html', context)
 
 
+# CREATE
+class Create(CreateView):
+    template_name = "addnews2.html"
+    model = MO_news
+    form = FO_addnews2
+    fields = '__all__'
+    success_url = reverse_lazy('URL_news')
+
 # UPDATE 
 class Update(UpdateView):
     model = MO_news
-    form = FO_addnews2
+    # form = FO_addnews2
     # context_object_name = 'form1'
     fields = '__all__'
-    template_name = "addnews.html"
+    template_name = "addnews2.html"
     success_url = reverse_lazy('URL_news')
 
 # DELETE 
