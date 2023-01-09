@@ -11,13 +11,13 @@
     {% if request.user.is_authenticated %}
         <div class="container p-4">
             {% comment %} <a href="{% url 'URL_managenews' pk=0 %}"> {% endcomment %}
-            <a href="{% url 'URL_createnews' %}">
+            <a href="{% url 'URL_createnews' %}" style="text-decoration: none; color:rgba(6, 24, 72, 1);">
                 {% comment %} pk=news.id {% endcomment %}
                 <div class="card card-body">
                     <div class="row">
                         <center>
                             <img style="max-width: 80px;" src={% static 'files/add.png' %} alt=" pic_add">
-                            <h3>Agregar</h3>
+                            <h3 >Agregar</h3>
                         </center>
                     </div>
                 </div>
@@ -36,7 +36,11 @@
                         <img class="img-fluid" src="{{ news.image.url | default_if_none:'#' }}" alt=" pic_{{ news.title }}" alig-center>
                     </div>
                     <div class="col-7">
-                        <h3><a href="{% url 'URL_new_details' pk=news.id %}">{{ news.title }}</a></h3>
+                        <h3>
+                            <a href="{% url 'URL_new_details' pk=news.id %}"style="text-decoration: none; color:rgba(6, 24, 72, 1);">
+                                {{ news.title }}
+                            </a>
+                        </h3>
                         <p class="text-muted">{{ news.date | date:"M, d, Y" | upper }}</p>
                         <p >{{ news.description | striptags | truncatechars:200 }}</p>
                     </div>

@@ -2,11 +2,25 @@
 {% load static %}
 {% block content %}
 <section class="sec_home1">
-    <br/>
-    <br/>
-    <h1 align="center" class="animation1">PUMAS F.C.</h1>
+    {% for i in '123456' %}
+    <br>
+    {% endfor %}
+    <center>
+    <div class="animation1">
+        <div class="home_main_title">
+            <div class="container p-4">
+                PUMAS MX
+            </div>
+        </div>
+        <div class="home_main_subtitle">
+            <div class="container p-4">
+                FUTBOL · CLUB · FUNDACIÓN
+            </div>
+        </div>
+    </div>
+</center>
     <!-- <img src={% static 'files/txt1.png' %} alt="txt"> -->
-    <br/>
+    <br />
     <!-- aaa -->
     <!-- <img src="{% static 'files/logo1.png' %}" alt="aaa" width="50%" height="20%"> -->
 </section>

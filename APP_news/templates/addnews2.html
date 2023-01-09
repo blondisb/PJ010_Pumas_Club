@@ -14,7 +14,7 @@
 <section>
     <div class="container mt-5" style="max-width: 450px;">
         <div class="card p-3 border-dark">
-            <form method="POST" autocomplete="off">
+            <form method="POST" enctype="multipart/form-data" autocomplete="off">
                 {% csrf_token %}
                 {{ form.title|as_crispy_field}}
                 {{ form.description|as_crispy_field}}

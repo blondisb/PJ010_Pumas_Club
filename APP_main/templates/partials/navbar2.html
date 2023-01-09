@@ -22,8 +22,16 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href={% url 'URL_stats' %}>STATS</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href={% url 'URL_about' %}>EL CLUB</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        EL CLUB
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href={% url 'URL_about' %}>Acerca de</a></li>
+                        <li><a class="dropdown-item" href={% url 'VW_foundation' %}>Fundación</a></li>
+                        <li><a class="dropdown-item" href={% url 'URL_sponsors' %}>Patrocinadores</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={% url 'URL_contact' %}>CONTÁCTENOS</a>

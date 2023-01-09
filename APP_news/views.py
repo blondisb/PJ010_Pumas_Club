@@ -83,6 +83,7 @@ class Create(CreateView):
     success_url = reverse_lazy('URL_news')
 
 # UPDATE 
+# @login_required()
 class Update(UpdateView):
     model = MO_news
     # form = FO_addnews2
