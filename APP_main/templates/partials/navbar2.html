@@ -15,12 +15,12 @@
 
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto NAV_titles">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href={% url 'URL_news' %}>NOTICIAS</a>
+                    <a class="nav-link" aria-current="page" href={% url 'URL_news' %}>NOTICIAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href={% url 'URL_stats' %}>STATS</a>
+                    <a class="nav-link" aria-current="page" href={% url 'URL_stats' %}>STATS</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -40,7 +40,7 @@
                     {% if request.user.is_authenticated %}
                         <a class="btn btn-primary btn-sm" href={% url 'URL_logout' %}>LOGOUT</a>
                     {% else %}
-                        <a class="btn btn-primary btn-sm" href={% url 'login' %}>LOGIN</a>
+                        <a class="btn btn-primary btn-sm active" href={% url 'login' %}>LOGIN</a>
                     {% endif %}
                     <!-- target="_blank" -->
                 </li>

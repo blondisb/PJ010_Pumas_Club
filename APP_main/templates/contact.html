@@ -3,22 +3,41 @@
 {% block content %}
 
 <div class="div_main_contact">
+    <center>
 
 
     <section>
-        <div class="p-4">
-            <center>
-                <img class="img-fluid" src={% static 'files/whatsapp.png' %} alt="whatsapp-logo" width="25%">
-                <img class="img-fluid" src={% static 'files/facebook.png' %} alt="facebook-logo" width="25%">
-            </center>
+        <div class="p-4 centerf mx-4 about_icons">
+            
+                <div class="row">
+
+                    {% comment %} <div class="col-lg-4 col-md-6 mb-4 mb-md-0 px-8"> {% endcomment %}
+                    <div class="col-md-4">
+                        <a href="http://wa.me/57311433160" target="_blank">
+                            <img class="img-fluid" src={% static 'files/whatsapp.png' %} alt="whatsapp-logo" width="45%">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4"> 
+                        <a href="https://www.facebook.com/profile.php?id=100064115463414" target="_blank">
+                            <img class="img-fluid" src={% static 'files/facebook.png' %} alt="facebook-logo" width="45%">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4">  
+                        <a href="https://www.instagram.com/pumasclubdeportivo/" target="_blank">                      
+                            <img class="img-fluid" src={% static 'files/instagram.png' %} alt="facebook-logo" width="45%">
+                        </a>
+                    </div>
+
+                </div>
         </div>
     </section>
 
 
 
     <section>
-        <div class="div_contact">
-            Contáctenos
+        <div class="div_contact mx-4 centerf">
             <form>
                 <div>
                     <label></label>
@@ -36,12 +55,15 @@
                     <label></label>
                     <textarea class="form-control" name="message" placeholder="Mensaje" rows="4" cols="50"></textarea>
                 </div>
-                <div>
-                    <a>Button Submit</a>
+
+                <br>
+            <div>
+                    <a class="btn btn-primary">Enviar</a>
                 </div>
             </form>
         </div>
     </section>
 
+</center>
 </div>
 {% endblock %}

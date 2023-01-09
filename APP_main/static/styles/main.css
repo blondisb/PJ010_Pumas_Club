@@ -110,6 +110,24 @@ section {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###################################################
+
+NAVBAR-
+
+################################################### */
+
 /* Color of the links BEFORE scroll */
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler-icon,
@@ -146,9 +164,40 @@ section {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
+.NAV_titles li a:hover{
+  color: rgba(171, 114, 5, 0.6);
+  font-weight: bold;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###################################################
+
+- - --
+
+################################################### */
 .gradient_custom2 {
   /* fallback for old browsers */
   background: #fccb90;
@@ -240,6 +289,31 @@ section {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###################################################
+
+HOME-
+
+################################################### */
 .home_main_title{
   /* font-family: EB Garamond; */
   font-family:Lucida Console;
@@ -277,3 +351,63 @@ section {
   /* -webkit-text-stroke: 2px rgba(6, 24, 72, 1); */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###################################################
+
+ABOUT-
+
+################################################### */
+.about_content{
+  font-family:'Segoe UI'; 
+  font-size: 20px;
+}
+
+.about_icons img:hover{
+  /* background-color: white; */
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ###################################################
+
+FOOTER-
+
+################################################### */
+
+.FOO_icons_follow a:hover{
+  background-color: black;
+}
+
+.FOO_text_link:hover{
+  color:rgba(0, 0, 0, 1);
+}

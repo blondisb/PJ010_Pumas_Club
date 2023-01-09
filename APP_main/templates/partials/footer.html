@@ -1,63 +1,77 @@
 {% load static %}
 
 <div style="background-color: whithe;">
-<footer class="text-center text-white" style="background-color: rgba(0, 0, 0, 0.2);">
-    {% comment %} #0a4275;"> {% endcomment %}
-    <!-- Grid container -->
-    <div class="container p-4 pb-0" >
-        <!-- Section: CTA -->
-        <div class="mb-4">
-            <br>
-            <h6 class="text-muted" style="text-decoration: none;">SÍGUENOS</h6>
-            <br>
+    <footer class="text-center text-white" style="background-color: rgba(0, 0, 0, 0.2);">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!--Grid row-->
+            <div class="row">
 
-            <a class="btn btn-primary btn-floating m-1"
-                style="background-color: gray"
-                {% comment %} #3b5998 {% endcomment %}
-                href="https://www.facebook.com/profile.php?id=100064115463414" target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-primary btn-floating m-1" style="background-color: gray" href="https://www.instagram.com/pumasclubdeportivo/" target="_blank" role="button"><i class="fab fa-instagram"></i></a>
-            <a class="btn btn-primary btn-floating m-1" style="background-color: gray" href="http://wa.me/57311433160" target="_blank" role="button"><i class="fab fa-whatsapp"></i></a>
 
-                <br>
-            <p class="d-flex justify-content-center align-items-center">
-                <hr>
-                <h6 class="text-muted" style="text-decoration: none;">PATROCINADORES</h6>
-                <div class="p-2" style="color: rgba(0, 0, 0, 0.25);">
-                    [ -- Ingrese su marca aqui -- ]
-                </div>
-                <!-- <hr>
-                {% comment %} <span class="me-3" style="text-decoration: none; color: black;">Login</span> {% endcomment %}
-                <button type="button" class="btn btn-rounded">
-                    <div>
-                        <h6><a href="{% url 'URL_contact' %}" class="text-muted" style="text-decoration: none; color: black;">CONTÁCTENOS</a></h6>
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <!-- Section: CTA -->
+                    <div class="mb-4 FOO_icons_follow">
+                        <br>
+                        <h6 class="text-muted" style="text-decoration: none;">SÍGUENOS</h6>
+                        <hr>
+                        
+                        <a class="btn btn-secondary btn-floating m-1"
+                            href="https://www.facebook.com/profile.php?id=100064115463414"
+                            target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+
+                        <a class="btn btn-secondary btn-floating m-1"
+                            href="https://www.instagram.com/pumasclubdeportivo/" target="_blank" role="button"><i
+                                class="fab fa-instagram"></i></a>
+
+                        <a class="btn btn-secondary btn-floating m-1"
+                            href="http://wa.me/57311433160" target="_blank" role="button"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <br>
+                        <p class="d-flex justify-content-center align-items-center">
                     </div>
-                    <br>
-                    <img src="{% static 'files/lg-pumas-bg.png' %}" width="75" height="60" />
-                    
-                </button> -->
-            </p>
-        </div>
-        <!-- Section: CTA -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-4 text-muted" style="background-color: rgba(0, 0, 0, 0.1);">
-        <br>
-        <div>
-                Pumas MX © {% now "Y" %} Todos los derechos reservados
-            {% comment %} <a class="text-white" href="">opw-store.com</a> {% endcomment %}
-            <hr>
-            <a href="https://blondisbarrios.nicepage.io/"
-                style="text-decoration: none; color:rgba(0, 0, 0, 0.3); margin: 30px 0;"
-                target="_blank">
-                <div class="p-2">
-                    Esta plataforma ha sido creada por Blondis Barrios. Click aqui para mas información.
                 </div>
-            </a>
+
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <!-- Section: CTA -->
+                    <div class="mb-4">
+                        <br>
+                        <h6 class="text-muted" style="text-decoration: none;">PATROCINADORES</h6>
+                        <hr>
+                        <div class="p-2" style="color: rgba(0, 0, 0, 0.25);">
+                            [ -- Ingrese su marca aqui -- ]
+                        </div>
+                        </p>
+                    </div>
+                    <!-- Section: CTA -->
+                </div>
+                <!-- Grid col -->
+
+
+            </div>
+            <!-- Grid row -->
         </div>
-        
-    </div>
-    <!-- Copyright -->
-</footer>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 text-muted" style="background-color: rgba(0, 0, 0, 0.1);">
+            <br>
+            <div>
+                Pumas MX © {% now "Y" %} Todos los derechos reservados
+                {% comment %} <a class="text-white" href="">opw-store.com</a> {% endcomment %}
+                <hr>
+                <a href="https://blondisbarrios.nicepage.io/"
+                    style="text-decoration: none; color:rgba(0, 0, 0, 0.3); margin: 30px 0;" target="_blank">
+                    <div class="p-2 FOO_text_link">
+                        Esta plataforma ha sido creada por Blondis Barrios. Click aqui para mas información.
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <!-- Copyright -->
+    </footer>
 </div>
