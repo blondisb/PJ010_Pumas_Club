@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'APP_news',
     "crispy_forms",
     "crispy_bootstrap5",
+    'django_cleanup.apps.CleanupConfig', # should be placed after your apps
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
